@@ -6,16 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cashmere</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".intro").click(function(){
+                $("html, body").animate({scrollTop : $("#intro").offset().top - 80}, 1000);
+                return false;
+            });
+            $(".story").click(function(){
+                $("html, body").animate({scrollTop : $("#story").offset().top - 80}, 1000);
+                return false;
+            });
+            $(".journal").click(function(){
+                $("html, body").animate({scrollTop : $("#journal").offset().top - 80}, 1000);
+                return false;
+            });
+
+            $(".stores").click(function(){
+                $("html, body").animate({scrollTop : $("#stores").offset().top - 80}, 1000);
+                return false;
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
         <div class="wrap">
             <a href="#" class="logo"><img src="./img/logo.png" alt="캐시미어 로고"></a>
             <ul class="menu">
-                <li><a href="#">INTRO</a></li>
-                <li><a href="#">STORY</a></li>
-                <li><a href="#">JOURNAL</a></li>
-                <li><a href="#">STORES</a></li>
+                <li><a href="#" class="intro">INTRO</a></li>
+                <li><a href="#" class="story">STORY</a></li>
+                <li><a href="#" class="journal">JOURNAL</a></li>
+                <li><a href="#" class="stores">STORES</a></li>
             </ul>
             <div class="link">
                 <ul>
@@ -38,7 +60,7 @@
 
     <section id="instory">
         <div class="wrap">
-            <article class="intro">
+            <article class="intro" id="intro">
                 <h4>Intro</h4>
                 <div class="box_flex">
                     <div class="box">
@@ -65,7 +87,7 @@
                     </div>
                 </div>
             </article>
-            <article class="story">
+            <article class="story" id="story">
                 <h4>Story</h4>
                 <div class="box">
                     <div class="img"></div>
